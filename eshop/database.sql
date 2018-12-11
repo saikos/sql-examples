@@ -40,6 +40,7 @@ CREATE TABLE `favourites` (
 
 LOCK TABLES `favourites` WRITE;
 /*!40000 ALTER TABLE `favourites` DISABLE KEYS */;
+INSERT INTO `favourites` VALUES (3,1),(2,2),(3,2),(4,2),(5,2),(1,3),(1,4),(4,4);
 /*!40000 ALTER TABLE `favourites` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -55,7 +56,7 @@ CREATE TABLE `product` (
   `name` varchar(45) NOT NULL,
   `price` decimal(6,2) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,6 +65,7 @@ CREATE TABLE `product` (
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
+INSERT INTO `product` VALUES (1,'TV 32\'\'',199.99),(2,'TV 42\'\'',299.99),(3,'TV 52\'\'',599.99),(4,'TV 50\'\'',499.99);
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -80,7 +82,7 @@ CREATE TABLE `user` (
   `fullname` varchar(50) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -89,6 +91,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1,'geocha@cb6','Χατζηπαναγιώτου, Γιώργος'),(2,'theobou@cb6','Μπούρας, Θοδωρής'),(3,'serdav@cb6','Davanzo, Sera'),(4,'panchri@cb6','Χριστοφοράκης, Παναγιώτης'),(5,'dimexa@cb6','Εξαδάκτυλος Δημήτρης');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -101,4 +104,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-06 10:59:54
+-- Dump completed on 2018-12-11 10:05:19
